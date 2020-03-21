@@ -24,4 +24,3 @@ to capture data easier.
 ## Back end
 - Pull from Crimes Against Asians facebook page
 - Use Facebook API
-
