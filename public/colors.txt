@@ -1,0 +1,31 @@
+Dark Grey base Colors
+Text color:
+#ffffff
+
+Surface color:
+#121212
+
+Container color:
+#1e1e1e (white 5% transparency overlay)
+
+Focus color:
+#2f2f2f (white 12% transparency overlay)
+
+Pressed color:
+#2a2a2a (white 10% transparency overlay)
+
+Dragged color:
+#252525 (white 8% transparency overlay)
+
+Accent colors
+Primary Accent color: (this is only used for default theme not dark theme)
+#AA1D26 (some red)
+
+Buttons Accent color (please use this color as a transparency overlay):
+#C58488 (overlay this over the surface color (by 8% is nice))
+
+Secondary Accent color: (default theme)
+#BBDA2F
+
+Buttons Accent color (please use this color as a transparency overlay):
+#DCED99 (overlay this over the surface color (by 8% is nice))
