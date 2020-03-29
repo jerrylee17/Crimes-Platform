@@ -5,7 +5,10 @@ import {
   NavbarToggler,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  Container,
+  Col,
+  Row
 } from 'reactstrap';
 import './Navbar.css'
 
@@ -18,25 +21,31 @@ function NavBar({
 
   return (
     <>
-      <div>
-        <Navbar sticky='left' light expand=''>
-        <NavbarToggler onClick={toggle} />
-          <Collapse isOpen={isOpen} navbar>
-            <Nav tabs vertical>
-              <NavItem>
-                <NavLink href='/'>Home</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href='/posts'>Posts</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href='/stats'>Statistics</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
-      </div>
-      <Component/>
+      <Container fluid style={{ paddingLeft: '0px', paddingRight: '0px' }}>
+        <Row>
+          <Col md='3' style={{overflow:'hidden'}}>
+            <Navbar light expand=''>
+              <NavbarToggler onClick={toggle} />
+              <Collapse isOpen={isOpen} navbar>
+                <Nav tabs vertical>
+                  <NavItem>
+                    <NavLink href='/'>Home</NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink href='/posts'>Posts</NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink href='/stats'>Statistics</NavLink>
+                  </NavItem>
+                </Nav>
+              </Collapse>
+            </Navbar>
+          </Col>
+          <Col>
+            <Component />
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }
