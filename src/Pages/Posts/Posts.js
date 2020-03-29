@@ -4,8 +4,8 @@ class Home extends Component {
     return (
       <>
         <div>
-          Homepage
-            </div>
+          Posts
+        </div>
       </>
     );
   }

@@ -10,8 +10,9 @@ to capture data easier.
 
 #### Pages
 - Home page
-- Stories
-- News
+- Posts
+    - News
+    - Stories
 - Statistics
     - World map of where crimes are occuring
     - Types of crimes

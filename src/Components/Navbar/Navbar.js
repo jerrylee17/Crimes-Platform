@@ -3,16 +3,11 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
+  NavLink
 } from 'reactstrap';
+import './Navbar.css'
 
 function NavBar({
   component: Component
@@ -20,40 +15,28 @@ function NavBar({
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+
   return (
     <>
-      <Navbar color='light' light expand='md'>
-        <NavbarBrand href='/'>Crimes Against Asians</NavbarBrand>
+      <div>
+        <Navbar sticky='left' light expand=''>
         <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className='mr-auto' navbar>
-            <NavItem>
-              <NavLink href='/'>Home</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href='/stories'>Stories</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href='/news'>News</NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Statistics
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem href='/charts'>
-                  Charts and Graphs
-                </DropdownItem>
-                <DropdownItem href='/map'>
-                  Map
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-          <NavbarText>Simple Text</NavbarText>
-        </Collapse>
-      </Navbar>
-      <Component />
+          <Collapse isOpen={isOpen} navbar>
+            <Nav tabs vertical>
+              <NavItem>
+                <NavLink href='/'>Home</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href='/posts'>Posts</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href='/stats'>Statistics</NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
+      <Component/>
     </>
   );
 }
