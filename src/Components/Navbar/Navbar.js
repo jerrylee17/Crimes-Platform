@@ -18,12 +18,15 @@ function NavBar({
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+  const containerStyles={ paddingLeft: '0px', paddingRight: '0px', overflow:'hidden' };
 
   return (
     <>
-      <Container fluid style={{ paddingLeft: '0px', paddingRight: '0px' }}>
+      <Container fluid style={containerStyles}>
         <Row>
-          <Col md='3' style={{overflow:'hidden'}}>
+          <Col md='3' style={
+            {overflow:'hidden', height:'100vh', backgroundColor:'blue'}
+            }>
             <Navbar light expand=''>
               <NavbarToggler onClick={toggle} />
               <Collapse isOpen={isOpen} navbar>
@@ -41,7 +44,7 @@ function NavBar({
               </Collapse>
             </Navbar>
           </Col>
-          <Col>
+          <Col style={containerStyles}>
             <Component />
           </Col>
         </Row>
