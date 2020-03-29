@@ -14,11 +14,8 @@ import {
   ListItemIcon,
   ListItemText
 } from '@material-ui/core';
-import { 
-  MenuIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon
-} from '@material-ui/icons';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import {
   Collapse,
   Navbar,
