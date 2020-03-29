@@ -21,3 +21,10 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+api/credentials
+api/node_modules
+credentials
+api/.env
+.env
+.vscode
