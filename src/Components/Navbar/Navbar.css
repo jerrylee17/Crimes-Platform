@@ -1,0 +1,17 @@
+.navbar-expand- {
+    display: inline-block;
+    background-color: #1e1e1e;
+    position: relative;
+    width: 140%;
+    height: 100%;
+    padding-right: 0px;
+    display: "flex";
+    flex-direction: "column";
+}
+
+.navbar-toggler {
+    /* background-color: #aa1d26; */
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}

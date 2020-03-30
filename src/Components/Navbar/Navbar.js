@@ -3,16 +3,14 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
+  Container,
+  Col,
+  Row
 } from 'reactstrap';
+import './Navbar.css'
 
 function NavBar({
   component: Component
@@ -20,40 +18,37 @@ function NavBar({
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
+  const containerStyles={ paddingLeft: '0px', paddingRight: '0px', overflow:'hidden' };
+
   return (
     <>
-      <Navbar color='light' light expand='md'>
-        <NavbarBrand href='/'>Crimes Against Asians</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className='mr-auto' navbar>
-            <NavItem>
-              <NavLink href='/'>Home</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href='/stories'>Stories</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href='/news'>News</NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Statistics
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem href='/charts'>
-                  Charts and Graphs
-                </DropdownItem>
-                <DropdownItem href='/map'>
-                  Map
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-          <NavbarText>Simple Text</NavbarText>
-        </Collapse>
-      </Navbar>
-      <Component />
+      <Container fluid style={containerStyles}>
+        <Row>
+          <Col md='3' style={
+            {overflow:'hidden', height:'100vh', backgroundColor:'blue'}
+            }>
+            <Navbar light expand=''>
+              <NavbarToggler onClick={toggle} />
+              <Collapse isOpen={isOpen} navbar>
+                <Nav tabs vertical>
+                  <NavItem>
+                    <NavLink href='/'>Home</NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink href='/posts'>Posts</NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink href='/stats'>Statistics</NavLink>
+                  </NavItem>
+                </Nav>
+              </Collapse>
+            </Navbar>
+          </Col>
+          <Col style={containerStyles}>
+            <Component />
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }
