@@ -12,39 +12,44 @@ import {
 } from 'reactstrap';
 import './Navbar.css'
 
+function VanillaBar(props) {
+  return (
+    <nav className="navbar">
+      <ul className="navbar-nav">
+        <li className="nav-item">
+          <a href="/home" className="nav-link">
+            <span className="link-text">Home</span>
+          </a>
+        </li>
+        <li className="nav-item">
+          <a href="/stats" className="nav-link">
+            <span className="link-text">Statistics</span>
+          </a>
+        </li>
+        <li className="nav-item">
+          <a href="/posts" className="nav-link">
+            <span className="link-text">Posts</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  )
+}
+
 function NavBar({
   component: Component
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
-  const containerStyles={ paddingLeft: '0px', paddingRight: '0px', overflow:'hidden' };
+  const containerStyles = { paddingLeft: '0px', paddingRight: '0px', overflow: 'hidden' };
 
   return (
     <>
       <Container fluid style={containerStyles}>
         <Row>
-          <Col md='3' style={
-            {overflow:'hidden', height:'100vh', backgroundColor:'blue'}
-            }>
-            <Navbar light expand=''>
-              <NavbarToggler onClick={toggle} />
-              <Collapse isOpen={isOpen} navbar>
-                <Nav tabs vertical>
-                  <NavItem>
-                    <NavLink href='/'>Home</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href='/posts'>Posts</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href='/stats'>Statistics</NavLink>
-                  </NavItem>
-                </Nav>
-              </Collapse>
-            </Navbar>
-          </Col>
           <Col style={containerStyles}>
+            <VanillaBar />
             <Component />
           </Col>
         </Row>

@@ -1,17 +1,103 @@
-.navbar-expand- {
-    display: inline-block;
-    background-color: #1e1e1e;
-    position: relative;
-    width: 140%;
-    height: 100%;
-    padding-right: 0px;
-    display: "flex";
-    flex-direction: "column";
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --navbar-width: 5rem
 }
 
-.navbar-toggler {
-    /* background-color: #aa1d26; */
-    position: absolute;
-    top: 10px;
-    left: 5px;
+body {
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: red;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: green;
+}
+
+main {
+    margin-left: var(--navbar-width);
+    padding: 1em;
+}
+
+.navbar {
+    width: var(--navbar-width);
+    height: 5vh;
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width 200ms ease, height 400ms ease 200ms;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 300ms ease 500ms; 
+}
+
+.navbar-item {
+    width: 100%;
+}
+
+.navar:hover .navbar-item {
+    visibility: visible;
+}
+
+.nav-item:last-child {
+    margin-top: auto;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+}
+
+.nav-link svg {
+    min-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+.navbar:hover {
+    width: 10rem;
+    height: 100vh;
+}
+.navbar:hover .navbar-nav{
+    opacity:100;
+}
+
+.navbar:hover .link-text {
+    display: block
 }
