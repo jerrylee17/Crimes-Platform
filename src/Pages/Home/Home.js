@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import './Home.css'
-
+import GoogleLogin from '../../Components/Auth/Login/Login.js'
+import Usercard from '../../Components/Auth/Usercard/Usercard.js'
+import Signout from '../../Components/Auth/Signout/Signout.js'
 class Home extends Component {
   render() {
     return (
       <>
         <div className='homeTitle'>
+        <Usercard />
           <h1>Crimes Against Asians</h1>
           <br />
           <h3> About this platform </h3>

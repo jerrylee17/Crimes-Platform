@@ -28,3 +28,4 @@ credentials
 api/.env
 .env
 .vscode
+package-lock.json
