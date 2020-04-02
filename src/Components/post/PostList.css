@@ -1,0 +1,7 @@
+.post-list {
+  list-style-type: none;
+  margin: 1rem auto;
+  padding: 0;
+  width: 100%;
+  max-width: 45rem;
+}

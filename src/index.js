@@ -20,7 +20,7 @@ const firebaseConfig = {
 
 function App() {
   return (
-    <div>
+    <div className='index'>
       <Routing />
     </div>
   );
