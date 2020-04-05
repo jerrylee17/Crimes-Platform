@@ -29,6 +29,10 @@ api/credentials
 api/node_modules
 credentials
 api/.env
+fT
+initialGrab
+
+.vscode
 .env
 .vscode
 package-lock.json
