@@ -1,10 +1,8 @@
 .navbar-expand- {
-    display: inline-block;
     background-color: #1e1e1e;
-    position: relative;
-    width: 140%;
+    position: fixed;
+    width: 20%;
     height: 100%;
-    padding-right: 0px;
     display: "flex";
     flex-direction: "column";
 }
