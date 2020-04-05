@@ -1,4 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+.gitignore
 
 # dependencies
 /node_modules
@@ -13,11 +14,32 @@
 
 # misc
 .DS_Store
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+api/credentials
+api/node_modules
+credentials
+api/.env
+fT
+initialGrab
+
+.vscode
+.env
+package-lock.json
+
+/credentials
+/functions
+testFb.js
+
+api/node_modules
+api/.env
+api/credentials
