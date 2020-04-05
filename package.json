@@ -1,8 +1,10 @@
 {
   "name": "crimes-against-asians",
+  "description": "Website that organizes crimes committed against asians based on category.",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.9.8",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -24,6 +26,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "repository": "https://github.com/jerrylee17/Crimes-Against-Asians",
   "browserslist": {
     "production": [
       ">0.2%",
