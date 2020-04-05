@@ -17,7 +17,7 @@ function VanillaBar(props) {
     <nav className="navbar">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <a href="/home" className="nav-link">
+          <a href="/" className="nav-link">
             <span className="link-text">Home</span>
           </a>
         </li>
