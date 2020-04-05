@@ -34,5 +34,15 @@ initialGrab
 
 .vscode
 .env
+<<<<<<< HEAD
 .vscode
 package-lock.json
+=======
+
+
+/credentials
+/functions
+testFb.js
+
+api/node_modules
+>>>>>>> CORS and express boilerplate
