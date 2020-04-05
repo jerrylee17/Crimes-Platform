@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import Card from '../UIComponents/Card'
-import PostItem from './PostItem'
+import Card from '../UIComponents/Card';
+import PostItem from './PostItem';
 
-import './PostList.css'
+import './PostList.css';
 
 const PostList = props => {
   if (props.items.length === 0) {
@@ -13,7 +13,7 @@ const PostList = props => {
           <h3>No posts yet</h3>
         </Card>
       </div>
-    )
+    );
   }
   return (
     <ul className="post-list">
@@ -27,7 +27,7 @@ const PostList = props => {
         />
       ))}
     </ul>
-  )
-}
+  );
+};
 
-export default PostList
+export default PostList;

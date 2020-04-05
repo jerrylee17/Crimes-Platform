@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './Home.css'
-import Usercard from '../../Components/Auth/Usercard/Usercard.js'
+import './Home.css';
+import Usercard from '../../Components/Auth/Usercard/Usercard.js';
 
 class Home extends Component {
   render() {
@@ -22,4 +22,4 @@ class Home extends Component {
   }
 }
 
-export default Home
+export default Home;

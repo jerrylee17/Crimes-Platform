@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 import Home from './Pages/Home/Home.js';
 import Posts from './Pages/Posts/Posts.js';
 import Statistics from './Pages/Statistics/Statistics.js';
-import NavBar from './Components/Navbar/Navbar'
+import NavBar from './Components/Navbar/Navbar';
 
 
 export default function Routing() {
@@ -12,21 +12,21 @@ export default function Routing() {
   routes = (
     <Switch>
       <Route path='/' exact>
-        <Home/>
+        <Home />
       </Route>
       <Route path='/posts' exact>
-        <Posts/>
+        <Posts />
       </Route>
       <Route path='/stats' exact>
-        <Statistics/>
+        <Statistics />
       </Route>
-      <Redirect to='/'/>
+      <Redirect to='/' />
     </Switch>
-  )
+  );
 
   return (
     <Router>
-      <NavBar/>
+      <NavBar />
       <main>{routes}</main>
     </Router>
   );

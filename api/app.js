@@ -3,12 +3,12 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var cors = require("cors");
+var cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var testAPIRouter = require("./routes/testAPI");
-var postAPIRouter = require("./routes/post");
-var postColAPIRouter = require("./routes/postCollection");
+var testAPIRouter = require('./routes/testAPI');
+var postAPIRouter = require('./routes/post');
+var postColAPIRouter = require('./routes/postCollection');
 var app = express();
 
 require('./firebase.js');
@@ -26,9 +26,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use("/testAPI", testAPIRouter);
-app.use('/post', postAPIRouter)
-app.use('/postCol',  postColAPIRouter)
+app.use('/testAPI', testAPIRouter);
+app.use('/post', postAPIRouter);
+app.use('/postCol',  postColAPIRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
