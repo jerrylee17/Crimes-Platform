@@ -17,7 +17,6 @@
     "dotenv-extended": "^2.8.0",
     "fb": "^2.0.0",
     "firebase": "^7.13.1",
-    "fb": "^2.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-js-pull-to-refresh": "^1.2.2",
