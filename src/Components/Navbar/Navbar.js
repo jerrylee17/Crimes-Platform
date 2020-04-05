@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
 import {
-  Collapse,
-  Navbar,
   NavbarToggler,
-  Nav,
-  NavItem,
-  NavLink,
-  Container,
-  Col,
-  Row
+  Container
 } from 'reactstrap';
 import './Navbar.css'
+import BackDrop from '../UIComponents/Backdrop'
+import NavLinks from './NavLinks'
+import SideDrawer from './SideDrawer'
 
 function NavBar({
   component: Component
@@ -23,7 +19,26 @@ function NavBar({
   return (
     <>
       <Container fluid style={containerStyles}>
-        <Row>
+      {isOpen && <BackDrop onClick={toggle}/>}
+    
+      {/* <button
+          onClick={toggle}
+        >
+          <span style={color='white'}/>
+          <span style={color='white'}/>
+          <span style={color='white'}/>
+        </button> */}
+        <NavbarToggler onClick={toggle}/>
+        <SideDrawer show={isOpen} onClick={toggle}>
+          <nav className='main-navigation__drawer-nav'>
+            <NavLinks/>
+          </nav>
+        </SideDrawer>
+      
+      {/* <Col style={containerStyles}>
+        <Component />
+      </Col>  */}
+        {/*<Row>
           <Col md='3' style={
             {overflow:'hidden', height:'100vh', backgroundColor:'blue'}
             }>
@@ -44,10 +59,9 @@ function NavBar({
               </Collapse>
             </Navbar>
           </Col>
-          <Col style={containerStyles}>
-            <Component />
-          </Col>
-        </Row>
+          
+          </Row>*/}
+      
       </Container>
     </>
   );
