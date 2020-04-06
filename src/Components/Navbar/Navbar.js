@@ -3,10 +3,10 @@ import {
   NavbarToggler,
   Container
 } from 'reactstrap';
-import './Navbar.css'
-import BackDrop from '../UIComponents/Backdrop'
-import NavLinks from './NavLinks'
-import SideDrawer from './SideDrawer'
+import './Navbar.css';
+import BackDrop from '../UIComponents/Backdrop';
+import NavLinks from './NavLinks';
+import SideDrawer from './SideDrawer';
 
 function NavBar({
   component: Component
@@ -14,28 +14,28 @@ function NavBar({
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
-  const containerStyles={ paddingLeft: '0px', paddingRight: '0px', overflow:'hidden' };
+  const containerStyles = { paddingLeft: '0px', paddingRight: '0px', overflow: 'hidden' };
 
   return (
     <>
       <Container fluid style={containerStyles}>
-      {isOpen && <BackDrop onClick={toggle}/>}
-    
-      {/* <button
+        {isOpen && <BackDrop onClick={toggle} />}
+
+        {/* <button
           onClick={toggle}
         >
           <span style={color='white'}/>
           <span style={color='white'}/>
           <span style={color='white'}/>
         </button> */}
-        <NavbarToggler onClick={toggle}/>
+        <NavbarToggler onClick={toggle} />
         <SideDrawer show={isOpen} onClick={toggle}>
           <nav className='main-navigation__drawer-nav'>
-            <NavLinks/>
+            <NavLinks />
           </nav>
         </SideDrawer>
-      
-      {/* <Col style={containerStyles}>
+
+        {/* <Col style={containerStyles}>
         <Component />
       </Col>  */}
         {/*<Row>
@@ -61,7 +61,7 @@ function NavBar({
           </Col>
           
           </Row>*/}
-      
+
       </Container>
     </>
   );
