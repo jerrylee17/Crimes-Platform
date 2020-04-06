@@ -8,8 +8,12 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var testAPIRouter = require("./routes/testAPI");
 <<<<<<< HEAD
+<<<<<<< HEAD
 var postAPIRouter = require("./routes/post");
 var postColAPIRouter = require("./routes/postCollection");
+=======
+var postAPIRouter = require("./routes/post");
+>>>>>>> Added api for getting post data
 var app = express();
 
 require('./firebase.js');
@@ -33,10 +37,14 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use("/testAPI", testAPIRouter);
 <<<<<<< HEAD
+<<<<<<< HEAD
 app.use('/post', postAPIRouter)
 app.use('/postCol',  postColAPIRouter)
 =======
 >>>>>>> CORS and express boilerplate
+=======
+app.use('/post', postAPIRouter)
+>>>>>>> Added api for getting post data
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

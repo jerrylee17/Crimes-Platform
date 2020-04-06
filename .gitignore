@@ -36,3 +36,14 @@ initialGrab
 .vscode
 .env
 package-lock.json
+<<<<<<< HEAD
+=======
+
+/credentials
+/functions
+testFb.js
+
+api/node_modules
+api/.env
+api/credentials
+>>>>>>> Added api for getting post data
