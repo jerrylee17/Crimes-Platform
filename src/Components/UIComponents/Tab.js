@@ -20,14 +20,14 @@ export default function Tab(props) {
   return (
     <>
       <br />
-      <h1> {name}</h1>
+      <h1>{name}</h1>
       <br />
       <Container fluid>
         <section className='grid'>
           {posts && posts.length ? (
             posts.map((object, index) => {
               return (
-                <Card>
+                <Card className="titleStyle">
                   <CardTitle className='text-center'>
                     Post #{index}
                   </CardTitle>
