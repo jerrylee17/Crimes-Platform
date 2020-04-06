@@ -36,11 +36,3 @@ initialGrab
 .vscode
 .env
 package-lock.json
-
-/credentials
-/functions
-testFb.js
-
-api/node_modules
-api/.env
-api/credentials
