@@ -13,7 +13,7 @@ export default function Tab(props) {
     name,
     posts
   } = props;
-  console.log(posts);
+  //console.log(posts);
 
   return (
     <>
@@ -25,12 +25,12 @@ export default function Tab(props) {
           {posts && posts.length ? (
             posts.map((object, index) => {
               return (
-                <Card className="postCardStyle">
+                <Card className="postCardStyle" key={index}>
                   <CardTitle className='text-center'>
-                    Post #{index + 1}
+                    Post # {object.id}
                   </CardTitle>
                   <CardText>
-                    {object.content.split(' ').slice(0, 50).join(' ')}
+                    {(object.story)?object.story.split(' ').slice(0, 50).join(' '):object.message.split(' ').slice(0, 50).join(' ')}
                   </CardText>
                 </Card>
               );

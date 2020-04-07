@@ -26,7 +26,7 @@ export default function Display(props) {
           <Row>
             {tabs.map((Tab, index) => {
               return (
-                <Col>
+                <Col key={index}>
                   <NavItem>
                     <NavLink
                       className={classnames({
@@ -47,7 +47,7 @@ export default function Display(props) {
       <TabContent activeTab={activeTab}>
         {tabs.map((Tab, index) => {
           return (
-            <TabPane tabId={String(index + 1)}>
+            <TabPane tabId={String(index + 1)} key={index*index}>
               <Tab.Component />
             </TabPane>
           );
