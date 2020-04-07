@@ -25,7 +25,7 @@ export default function Tab(props) {
           {posts && posts.length ? (
             posts.map((object, index) => {
               return (
-                <Card className="titleStyle">
+                <Card className="postCardStyle">
                   <CardTitle className='text-center'>
                     Post #{index + 1}
                   </CardTitle>

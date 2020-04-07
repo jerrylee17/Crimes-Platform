@@ -5,7 +5,7 @@
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 }
 
-.titleStyle {
+.postCardStyle {
     background-color: #504d4d;
     color: #ffffff;
     font-family: "Verdana", "Geneva", sans-serif;
@@ -17,4 +17,20 @@
 .text-center {
     font-weight: bold;
     color: #b8db91;
+    font-size: 18px;
+}
+
+.tabStyle {
+    font-weight: 900;
+    font-size: 18px;
+    font-family: "Calibri", sans-serif;
+    width: 100%;
+}
+
+.titleStyle {
+    font-size: 15px;
+}
+
+.tabPaneStyle {
+    background-color: red;
 }
