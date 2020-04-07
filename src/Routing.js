@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { Col, Row } from 'reactstrap';
 import Home from './Pages/Home/Home.js';
 import Posts from './Pages/Posts/Posts.js';
 import Statistics from './Pages/Statistics/Statistics.js';
@@ -26,8 +27,14 @@ export default function Routing() {
 
   return (
     <Router>
-      <NavBar />
-      <main>{routes}</main>
+      <Row>
+      <Col xs='3'>
+        <NavBar/>
+      </Col>
+      <Col>
+        <main>{routes}</main>
+      </Col>
+      </Row>
     </Router>
   );
 }
