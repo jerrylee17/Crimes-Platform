@@ -10,7 +10,8 @@ import {
   Col,
   Row
 } from 'reactstrap';
-import './Navbar.css'
+import './Navbar.css';
+import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap";
 
 function VanillaBar(props) {
   return (
