@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import {
   Container,
   Card,
   CardTitle,
-  CardText,
-  CardImg,
-  Button
+  CardText
 } from 'reactstrap';
 import './Tab.css';
 
@@ -29,11 +27,10 @@ export default function Tab(props) {
               return (
                 <Card className="postCardStyle">
                   <CardTitle className='text-center'>
-                    Post #{index}
+                    Post #{index + 1}
                   </CardTitle>
                   <CardText>
-                    {object.content}
-                    {object.content.split(' ').slice(0, 30).join(' ')}
+                    {object.content.split(' ').slice(0, 50).join(' ')}
                   </CardText>
                 </Card>
               );

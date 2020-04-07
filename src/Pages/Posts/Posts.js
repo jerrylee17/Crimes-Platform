@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import {
   Nav,
   NavItem,
@@ -25,8 +26,16 @@ export default function Post() {
   const toggle = tab => {
     if (activeTab !== tab) setActiveTab(tab);
   };
+=======
+import { Button } from 'reactstrap';
+import Disp1 from './Disp1';
+import Disp2 from './Disp2';
+>>>>>>> 36aa7fb781287e08f50d98d125a69c273993ce53
 
+export default function Posts() {
+  const [disp, toggleDisp] = useState(true);
   return (
+<<<<<<< HEAD
     <>
       <Nav tabs>
         <Container>
@@ -74,5 +83,15 @@ export default function Post() {
         </TabPane>
       </TabContent>
     </>
+=======
+    <div>
+      <Button onClick={() => toggleDisp(!disp)} > Click to toggle displays </Button>
+      {disp ? (
+        <Disp1 />
+      ) : (
+        <Disp2 />
+      )}
+    </div>
+>>>>>>> 36aa7fb781287e08f50d98d125a69c273993ce53
   );
 }
