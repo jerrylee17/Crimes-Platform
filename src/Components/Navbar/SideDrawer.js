@@ -14,7 +14,7 @@ const SideDrawer = props => {
       mountOnEnter
       unmountOnExit
     >
-      <Col className="side-drawer" onClick={props.onClick}>{props.children}</Col>
+      <Col fluid className="side-drawer" onClick={props.onClick}>{props.children}</Col>
     </CSSTransition>
   );
 
