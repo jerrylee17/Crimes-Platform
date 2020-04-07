@@ -15,6 +15,7 @@
     "css-loader": "^3.4.2",
     "dotenv": "^8.2.0",
     "dotenv-extended": "^2.8.0",
+    "eslint": "^6.8.0",
     "fb": "^2.0.0",
     "firebase": "^7.13.1",
     "react": "^16.13.1",
@@ -30,7 +31,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "./node_modules/.bin/eslint ./",
+    "fix": "./node_modules/.bin/eslint --fix ./"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,0 +1,13 @@
+.nav-tabs .nav-link {
+    background: #2f2f2f;
+}
+
+.nav-tabs .nav-item .Story {
+    border-radius: 15px 15px 0 0;
+    border-bottom: 1px solid white;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #b8db91;
+    border: 1px solid #b8bd91;
+}

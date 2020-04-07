@@ -1,0 +1,36 @@
+.grid {
+    display: grid;
+    color: black;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+}
+
+.postCardStyle {
+    background-color: #504d4d;
+    color: #ffffff;
+    font-family: "Verdana", "Geneva", sans-serif;
+    border-radius: 10px 10px 10px 10px;
+    width: 80%;
+    padding: 12px 20px;
+}
+
+.text-center {
+    font-weight: bold;
+    color: #b8db91;
+    font-size: 18px;
+}
+
+.tabStyle {
+    font-weight: 900;
+    font-size: 18px;
+    font-family: "Calibri", sans-serif;
+    width: 100%;
+}
+
+.titleStyle {
+    font-size: 15px;
+}
+
+.tabPaneStyle {
+    background-color: red;
+}

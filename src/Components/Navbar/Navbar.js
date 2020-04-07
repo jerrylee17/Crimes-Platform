@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
 import {
-  Collapse,
-  Navbar,
   NavbarToggler,
-  Nav,
-  NavItem,
-  NavLink,
-  Container,
-  Col,
-  Row
+  Container
 } from 'reactstrap';
-import './Navbar.css'
+import './Navbar.css';
+import BackDrop from '../UIComponents/Backdrop';
+import NavLinks from './NavLinks';
+import SideDrawer from './SideDrawer';
 
 function NavBar({
   component: Component
@@ -18,36 +14,20 @@ function NavBar({
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
-  const containerStyles={ paddingLeft: '0px', paddingRight: '0px', overflow:'hidden' };
+  const containerStyles = { paddingLeft: '0px', paddingRight: '0px', overflow: 'hidden' };
 
   return (
     <>
       <Container fluid style={containerStyles}>
-        <Row>
-          <Col md='3' style={
-            {overflow:'hidden', height:'100vh', backgroundColor:'blue'}
-            }>
-            <Navbar light expand=''>
-              <NavbarToggler onClick={toggle} />
-              <Collapse isOpen={isOpen} navbar>
-                <Nav tabs vertical>
-                  <NavItem>
-                    <NavLink href='/'>Home</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href='/posts'>Posts</NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink href='/stats'>Statistics</NavLink>
-                  </NavItem>
-                </Nav>
-              </Collapse>
-            </Navbar>
-          </Col>
-          <Col style={containerStyles}>
-            <Component />
-          </Col>
-        </Row>
+        {isOpen && <BackDrop onClick={toggle} />}
+
+        <NavbarToggler onClick={toggle} />
+        <SideDrawer show={isOpen} onClick={toggle}>
+          <nav className='main-navigation__drawer-nav'>
+            <NavLinks />
+          </nav>
+        </SideDrawer>
+
       </Container>
     </>
   );
