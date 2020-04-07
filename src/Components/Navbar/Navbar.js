@@ -15,7 +15,11 @@ function NavBar({
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
-    setIsOpen(!isOpen); 
+    setIsOpen(!isOpen);
+    if(isOpen)
+      setStyle({...style, backgroundImage:'none'});
+    else
+      setStyle({...style, background:`url('http://getwallpapers.com/wallpaper/full/8/f/d/1127804-free-download-pretty-wallpapers-hd-1920x1200-for-iphone-7.jpg')`});
   };
   const [style, setStyle] = useState({height:'100vh', backgroundImage:`url('http://getwallpapers.com/wallpaper/full/8/f/d/1127804-free-download-pretty-wallpapers-hd-1920x1200-for-iphone-7.jpg')`});
   return (
