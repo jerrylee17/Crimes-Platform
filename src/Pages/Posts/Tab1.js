@@ -4,7 +4,7 @@ import Tab from '../../Components/UIComponents/Tab';
 export default function Tab1() {
 
   const sample = {
-    name: 'STORIES',
+    name: <h2><strong>STORIES</strong></h2>,
     posts: [{
       id: 12345,
       content: 'Hello! My name is Cian and I like to eat\

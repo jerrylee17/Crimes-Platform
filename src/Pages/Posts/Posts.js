@@ -11,6 +11,9 @@ import {
 } from 'reactstrap';
 import classnames from 'classnames';
 import Tab1 from './Tab1';
+import Tab from '../../Components/UIComponents/Tab';
+import './Posts.css';
+
 
 /**
  * @param {json} props contains all of the information in a post
@@ -29,29 +32,29 @@ export default function Post() {
         <Container>
           <Row>
             <Col>
-              <NavItem>
+              <NavItem className="tabStyle">
                 <NavLink
-                  className={classnames({ active: activeTab === '1' })}
+                  className={classnames('Story', { active: activeTab === '1' })}
                   onClick={() => toggle('1')}>
-                  Stories
+                  STORIES
                 </NavLink>
               </NavItem>
             </Col>
             <Col>
-              <NavItem>
+              <NavItem className="tabStyle">
                 <NavLink
-                  className={classnames({ active: activeTab === '2' })}
+                  className={classnames('Story', { active: activeTab === '2' })}
                   onClick={() => toggle('2')}>
-                  News
+                  NEWS
                 </NavLink>
               </NavItem>
             </Col>
             <Col>
-              <NavItem>
+              <NavItem className="tabStyle">
                 <NavLink
-                  className={classnames({ active: activeTab === '3' })}
+                  className={classnames('Story', { active: activeTab === '3' })}
                   onClick={() => toggle('3')}>
-                  Misc
+                  MISC
                 </NavLink>
               </NavItem>
             </Col>
