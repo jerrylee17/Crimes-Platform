@@ -14,24 +14,27 @@ function NavBar({
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => {
-    setIsOpen(!isOpen);
-    if(isOpen)
-      setStyle({...style, backgroundImage:'none'});
-    else
-      setStyle({...style, background:`url('http://getwallpapers.com/wallpaper/full/8/f/d/1127804-free-download-pretty-wallpapers-hd-1920x1200-for-iphone-7.jpg')`});
+  const openDrawer = () => {
+    setIsOpen(true);
+    setStyle({ ...style, backgroundImage: 'none' });
   };
-  const [style, setStyle] = useState({height:'100vh', backgroundImage:`url('http://getwallpapers.com/wallpaper/full/8/f/d/1127804-free-download-pretty-wallpapers-hd-1920x1200-for-iphone-7.jpg')`});
+
+  const closeDrawer = () => {
+    setIsOpen(false);
+    setStyle({ ...style, background: `url('http://getwallpapers.com/wallpaper/full/8/f/d/1127804-free-download-pretty-wallpapers-hd-1920x1200-for-iphone-7.jpg')` });
+  };
+
+  const [style, setStyle] = useState({backgroundImage: `url('http://getwallpapers.com/wallpaper/full/8/f/d/1127804-free-download-pretty-wallpapers-hd-1920x1200-for-iphone-7.jpg')` });
   return (
     <>
       <Container fluid className='navbar' style={style}>
-       <NavbarToggler onClick={toggle}/>
-       {isOpen &&
-        <Col show={isOpen} onClick={toggle} style={{width:'100%'}}>
-          <nav className='main-navigation__drawer-nav'>
-            <NavLinks />
-          </nav>
-        </Col>
+        <NavbarToggler onClick={openDrawer}/>
+        {isOpen &&
+          <Col show={isOpen} onClick={closeDrawer}>
+            <nav className='main-navigation__drawer-nav'>
+              <NavLinks />
+            </nav>
+          </Col>
         }
       </Container>
     </>
