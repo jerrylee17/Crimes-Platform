@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   NavbarToggler,
   Container,
@@ -21,18 +21,19 @@ function NavBar({
 
   const closeDrawer = () => {
     setIsOpen(false);
-    setStyle({ ...style, background: `url('http://getwallpapers.com/wallpaper/full/8/f/d/1127804-free-download-pretty-wallpapers-hd-1920x1200-for-iphone-7.jpg')` });
+    setStyle({ ...style, backgroundImage: `url('http://getwallpapers.com/wallpaper/full/8/f/d/1127804-free-download-pretty-wallpapers-hd-1920x1200-for-iphone-7.jpg')` });
   };
 
   const [style, setStyle] = useState({backgroundImage: `url('http://getwallpapers.com/wallpaper/full/8/f/d/1127804-free-download-pretty-wallpapers-hd-1920x1200-for-iphone-7.jpg')` });
+
   return (
     <>
       <Container fluid className='navbar' style={style}>
         <NavbarToggler onClick={openDrawer}/>
         {isOpen &&
-          <Col show={isOpen} onClick={closeDrawer}>
-            <nav className='main-navigation__drawer-nav'>
-              <NavLinks />
+          <Col onClick={closeDrawer}>
+            <nav>
+              <NavLinks/>
             </nav>
           </Col>
         }
