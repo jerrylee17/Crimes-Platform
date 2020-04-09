@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Container,
   Card,
   CardTitle,
-  CardText
+  CardText,
+  Modal,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button
 } from 'reactstrap';
 import './Tab.css';
 
@@ -13,7 +18,8 @@ export default function Tab(props) {
     name,
     posts
   } = props;
-  console.log(posts);
+  const [preview, setPreview] = useState(false);
+  const [content, setContent] = useState('');
 
   return (
     <>
@@ -25,14 +31,48 @@ export default function Tab(props) {
           {posts && posts.length ? (
             posts.map((object, index) => {
               return (
-                <Card className="postCardStyle">
-                  <CardTitle className='text-center'>
+                <>
+                  <Card className="postCardStyle"
+                    onClick={() => {
+                      setPreview(true);
+                      setContent(object.content);
+                    }
+                    }
+                  >
+                    <CardTitle className='text-center'>
                     Post #{index + 1}
-                  </CardTitle>
-                  <CardText>
-                    {object.content.split(' ').slice(0, 50).join(' ')}
-                  </CardText>
-                </Card>
+                    </CardTitle>
+                    <CardText>
+                      {object.content.split(' ').slice(0, 50).join(' ')}
+                    </CardText>
+                  </Card>
+                  <Modal isOpen={preview}
+                    toggle={() => {
+                      setPreview(!preview);
+                    }}
+                    size='xl'
+                  >
+                    <ModalHeader>
+                    Full Post
+                    </ModalHeader>
+                    <ModalBody>
+                      {content}
+                    </ModalBody>
+                    <ModalFooter>
+                      <Button
+                        color='danger'
+                        style={{
+                          float: 'left'
+                        }}
+                        onClick={() => {
+                          setPreview(false);
+                        }}
+                      >
+                    Back
+                      </Button>
+                    </ModalFooter>
+                  </Modal>
+                </>
               );
             })
           ) : (
@@ -40,6 +80,7 @@ export default function Tab(props) {
           )}
         </section>
       </Container>
+
     </>
   );
 }
