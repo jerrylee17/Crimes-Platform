@@ -1,42 +1,49 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
-  NavbarToggler,
-  Container,
-  Col
+  Container
 } from 'reactstrap';
 import './Navbar.css';
-import BackDrop from '../UIComponents/Backdrop';
 import NavLinks from './NavLinks';
 import SideDrawer from './SideDrawer';
+import back from './corona.png';
 
-function NavBar({
-  component: Component
-}) {
+const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const openDrawer = () => {
     setIsOpen(true);
-    setStyle({ ...style, backgroundImage: 'none' });
+    //setStyle({...style, backgroundImage: 'none'});
   };
 
   const closeDrawer = () => {
     setIsOpen(false);
-    setStyle({ ...style, backgroundImage: 'url(\'http://getwallpapers.com/wallpaper/full/8/f/d/1127804-free-download-pretty-wallpapers-hd-1920x1200-for-iphone-7.jpg\')' });
+    //setStyle({...style, backgroundImage: `url(${back})`});
   };
 
-  const [style, setStyle] = useState({backgroundImage: 'url(\'http://getwallpapers.com/wallpaper/full/8/f/d/1127804-free-download-pretty-wallpapers-hd-1920x1200-for-iphone-7.jpg\')' });
+  const style = ({
+    position: 'absolute',
+    width: '19rem',
+    height: '100%',
+    backgroundImage: `url(${back})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'noRepeat'
+  });
 
   return (
     <>
       <Container fluid className='navbar' style={style}>
-        <NavbarToggler onClick={openDrawer}/>
-        {isOpen &&
-          <Col onClick={closeDrawer}>
-            <nav>
-              <NavLinks/>
-            </nav>
-          </Col>
-        }
+      {/* {isOpen && <BackDrop onClick={closeDrawer} />} */}
+      <button onClick={openDrawer} className='navbut'>
+        <div/>
+        <div/>
+        <div/>
+      </button>
+      <SideDrawer show={isOpen} onClick={closeDrawer}>
+        <nav className='main-navigation__drawer-nav'>
+          <NavLinks />
+        </nav>
+      </SideDrawer>
       </Container>
     </>
   );
