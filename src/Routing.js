@@ -28,12 +28,12 @@ export default function Routing() {
   return (
     <Router>
       <Row>
-      <Col xs='3'>
-        <NavBar/>
-      </Col>
-      <Col>
-        <main>{routes}</main>
-      </Col>
+        <Col xs='3'>
+          <NavBar/>
+        </Col>
+        <Col>
+          <main>{routes}</main>
+        </Col>
       </Row>
     </Router>
   );
