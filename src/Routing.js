@@ -8,7 +8,7 @@ import NavBar from './Components/Navbar/Navbar';
 
 
 export default function Routing() {
-  let routes;//these are the logged out routes
+  let routes;
 
   routes = (
     <Switch>
@@ -27,10 +27,10 @@ export default function Routing() {
 
   return (
     <Router>
-      <Row>
-        <Col xs='3'>
+      <Row style={{display:'flex', margin: '0'}}>
+        <div style={{width:'20rem'}}>
           <NavBar/>
-        </Col>
+        </div>
         <Col>
           <main>{routes}</main>
         </Col>
