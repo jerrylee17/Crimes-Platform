@@ -12,7 +12,16 @@ export default function Misc() {
         it only grabs the first two words and must have a space between those words. \
         Here is one way to do it, no regex though, it only grabs the first two words \
         and must have a space between those words.',
-    }]
+    },
+    {
+      id: 123456,
+      content: 'Hello! My name is Cian and I like to eattttttttttttttt\
+        lots of food every day. Here is one way to do it, no regex though, \
+        it only grabs the first two words and must have a space between those words. \
+        Here is one way to do it, no regex though, it only grabs the first two words \
+        and must have a space between those words.',
+    }
+    ]
   };
   return (
     <div>

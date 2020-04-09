@@ -1,10 +1,10 @@
-# Crimes Against Asians
+# Crimes Platform
 
 The purpose of this website is to provide a platform for Asians to 
-report racism that they encouter. This website will pull data directly 
-from the Facebook Crimes Against Asians group and sort the data
-into different categories, allowing news reporters and journalists
-to capture data easier. 
+report racism that they encouter. When this platform is mounted on a 
+facebook, it will take the posts on the group and group it into
+different categories. These categories can be seen in the Posts
+page of the website and statistics will be shown in another tab
 
 ## Overview of UI
 
