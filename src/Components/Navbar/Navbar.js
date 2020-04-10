@@ -1,33 +1,49 @@
 import React, { useState } from 'react';
 import {
-  NavbarToggler,
   Container
 } from 'reactstrap';
 import './Navbar.css';
-import BackDrop from '../UIComponents/Backdrop';
 import NavLinks from './NavLinks';
 import SideDrawer from './SideDrawer';
+import back from './corona.png';
 
-function NavBar({
-  component: Component
-}) {
+const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen);
-  const containerStyles = { paddingLeft: '0px', paddingRight: '0px', overflow: 'hidden' };
+  const openDrawer = () => {
+    setIsOpen(true);
+    //setStyle({...style, backgroundImage: 'none'});
+  };
+
+  const closeDrawer = () => {
+    setIsOpen(false);
+    //setStyle({...style, backgroundImage: `url(${back})`});
+  };
+
+  const style = ({
+    position: 'absolute',
+    width: '19rem',
+    height: '100%',
+    backgroundImage: `url(${back})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'noRepeat'
+  });
 
   return (
     <>
-      <Container fluid style={containerStyles}>
-        {isOpen && <BackDrop onClick={toggle} />}
-
-        <NavbarToggler onClick={toggle} />
-        <SideDrawer show={isOpen} onClick={toggle}>
-          <nav className='main-navigation__drawer-nav'>
-            <NavLinks />
-          </nav>
-        </SideDrawer>
-
+      <Container fluid className='navbar' style={style}>
+      {/* {isOpen && <BackDrop onClick={closeDrawer} />} */}
+      <button onClick={openDrawer} className='navbut'>
+        <div/>
+        <div/>
+        <div/>
+      </button>
+      <SideDrawer show={isOpen} onClick={closeDrawer}>
+        <nav className='main-navigation__drawer-nav'>
+          <NavLinks />
+        </nav>
+      </SideDrawer>
       </Container>
     </>
   );

@@ -7,7 +7,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
-  background: #252525;
+  /* background: #252525;
+  margin: 0; */
 }
 
 code {
@@ -18,7 +19,8 @@ code {
 .index {
   background-color: #252525 ;
   color: #ffffff;
-  padding-left: 30px;
+  padding-left: 0px;
   padding-right: 30px;
   height: 100vh;
+  margin: 0;
 }
