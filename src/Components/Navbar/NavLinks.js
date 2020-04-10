@@ -24,25 +24,6 @@ const NavLinks = props => {
           Statistics
         </NavLink>
       </li>
-      {/* {auth.isLoggedIn && (
-        <li>
-          <NavLink to={`/${auth.userId}/posts`}>My posts</NavLink>
-        </li>
-      )} */}
-      {/* {auth.isLoggedIn && (
-        <li>
-          <NavLink to="/posts/new">My Posts</NavLink>
-        </li>
-      )}
-      {!auth.isLoggedIn && (
-        <li>
-          <NavLink to="/auth">Login</NavLink>
-        </li>
-      )}
-      {auth.isLoggedIn && (
-        <li>
-          <button onClick={auth.logout}>Logout</button>
-        </li>
       )} */}
     </ul>
   );

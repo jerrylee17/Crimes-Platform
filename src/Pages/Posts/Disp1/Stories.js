@@ -1,10 +1,10 @@
 import React from 'react';
-import Tab from '../../../Components/UIComponents/Tab';
+import Tab from '../Tab';
 
 export default function Stories() {
 
   const sample = {
-    name: 'Misc',
+    name: 'Stories',
     posts: [{
       id: 12345,
       content: 'Hello! My name is Cian and I like to eat\
