@@ -1,37 +1,33 @@
 import React, { useState } from 'react';
 import { Button } from 'reactstrap';
-import Display from './Display';
-import Attacks from './Disp2/Attacks';
-import Hate from './Disp2/Hate';
-import Vandalism from './Disp2/Vandalism';
-import Stories from './Disp1/Stories.js';
-import News from './Disp1/News.js';
+import Display from './Display'
+import TabDisplay from './TabDisplay'
 
 export default function Posts() {
   const [disp, toggleDisp] = useState(true);
   const Disp1 = {
     tabs: [{
       title: 'Stories',
-      Component: Stories
+      Component: TabDisplay
     },
     {
       title: 'News',
-      Component: News
+      Component: TabDisplay
     }
     ]
   };
   const Disp2 = {
     tabs: [{
       title: 'Hate Speech',
-      Component: Hate
+      Component: TabDisplay
     },
     {
       title: 'Vandalism',
-      Component: Vandalism
+      Component: TabDisplay
     },
     {
       title: 'Attacks',
-      Component: Attacks
+      Component: TabDisplay
     }
     ]
   };
