@@ -1,5 +1,5 @@
 import React from 'react';
-import Tab from '../../../Components/UIComponents/Tab';
+import Tab from '../Tab';
 
 export default function Misc() {
 
