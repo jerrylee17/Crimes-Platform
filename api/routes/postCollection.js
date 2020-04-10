@@ -10,14 +10,15 @@ router.get('/', async function (req, res, next) {
   //This allows : sorting, ordering, offsetting, limiting , and lastLimit
 
   var { whereFieldPath, orderFieldPath = 'updated_time',
-    opStr, dirStr = 'desc', whereValue,
-    limit='5', limitLast= Number(limit) - 0, offset= 0, type = 'obj' } = req.query;
+    opStr = '=', dirStr = 'desc', whereValue,
+    limit = '5', limitLast = Number(limit) - 0, offset = 0, type = 'obj' } = req.query;
+  opStr = (opStr == 'eq') ? '=' : (opStr == 'leq') ? '<=' : (opStr == 'geq') ? '>=' : (opStr == 'greater') ? '>' : (opStr == 'less') ? '<' : '=';
   limit = Number(limit);
   offset = Number(offset);
   limitLast = Number(limitLast);
-  console.log({limit, limitLast, offset, dirStr, orderFieldPath, type});
-    
-  let obj = (type == 'array')?[]:{};
+  console.log({ limit, limitLast, offset, dirStr, orderFieldPath, type });
+
+  let obj = (type == 'array') ? [] : {};
 
   var query = (whereFieldPath && opStr && whereValue) ?
     collection.offset(offset).where(whereFieldPath, opStr, whereValue) :
