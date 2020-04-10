@@ -27,11 +27,11 @@ export default function Routing() {
 
   return (
     <Router>
-      <Row style={{display:'flex', margin: '0'}}>
-        <div style={{width:'20rem'}}>
-          <NavBar/>
+      <Row style={{ display: 'flex', margin: '0' }}>
+        <div style={{ width: '20rem' }}>
+          <NavBar />
         </div>
-        <Col style={{paddingTop: '15px'}}>
+        <Col style={{ paddingTop: '15px' }}>
           <main>{routes}</main>
         </Col>
       </Row>
