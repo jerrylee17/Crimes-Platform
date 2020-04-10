@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { Button } from 'reactstrap';
-import Display from '../../Components/PostsDisplay/Display';
+import Display from './Display';
 import Attacks from './Disp2/Attacks';
 import Hate from './Disp2/Hate';
 import Vandalism from './Disp2/Vandalism';
 import Stories from './Disp1/Stories.js';
 import News from './Disp1/News.js';
-import Misc from './Disp1/Misc.js';
 
 export default function Posts() {
   const [disp, toggleDisp] = useState(true);
@@ -18,11 +17,7 @@ export default function Posts() {
     {
       title: 'News',
       Component: News
-    },
-    {
-      title: 'Misc',
-      Component: Misc
-    },
+    }
     ]
   };
   const Disp2 = {
@@ -37,10 +32,6 @@ export default function Posts() {
     {
       title: 'Attacks',
       Component: Attacks
-    },
-    {
-      title: 'Misc',
-      Component: Misc
     }
     ]
   };
