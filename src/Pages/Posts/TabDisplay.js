@@ -6,16 +6,16 @@ export default function TabDisplay(props) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [posts, setPosts] = useState([]);
   const name = props.name.replace(/\s/g, '').toLowerCase();
-  
+
   useEffect(() => {
-    fetch(`http://localhost:9000/postCol`)
+    fetch('http://localhost:9000/postCol')
       .then(res => res.json())
       .then(
         (result) => {
-          console.log(name, result)
+          console.log(name, result);
           result = Object.values(result).filter(x => x.category.substr(0, 3) === name.substr(0, 3) ||
-            x.subcategory.substr(0,3) === name.substr(0,3))
-          console.log(result)
+            x.subcategory.substr(0, 3) === name.substr(0, 3));
+          console.log(result);
           setIsLoaded(true);
           setPosts(Object.values(result));
         },
@@ -26,8 +26,8 @@ export default function TabDisplay(props) {
           setIsLoaded(true);
           setError(error);
         }
-      )
-  }, [name])
+      );
+  }, [name]);
 
   if (error) {
     return <div>Error: {error.message}</div>;

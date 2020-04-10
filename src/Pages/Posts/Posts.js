@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from 'reactstrap';
-import Display from './Display'
-import TabDisplay from './TabDisplay'
+import Display from './Display';
+import TabDisplay from './TabDisplay';
 
 export default function Posts() {
   const [disp, toggleDisp] = useState(true);

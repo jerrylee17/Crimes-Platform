@@ -20,8 +20,8 @@ export default function Display(props) {
   const tabs = props.tabs;
   
   useEffect(() => {
-    setActiveTab('1')
-  }, [tabs])
+    setActiveTab('1');
+  }, [tabs]);
 
   return (
     <>

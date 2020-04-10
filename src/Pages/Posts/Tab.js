@@ -56,7 +56,7 @@ export default function Tab(props) {
                     >
                       <ModalHeader>
                         Full Post
-                    </ModalHeader>
+                      </ModalHeader>
                       <ModalBody>
                         {content}
                       </ModalBody>
@@ -71,18 +71,18 @@ export default function Tab(props) {
                           }}
                         >
                           Back
-                      </Button>
+                        </Button>
                       </ModalFooter>
                     </Modal>
                   </>
                 );
               } else{
-                return <></>
+                return <></>;
               }
             })
           ) : (
-              <h1>No posts yet!</h1>
-            )}
+            <h1>No posts yet!</h1>
+          )}
         </section>
       </Container>
 
