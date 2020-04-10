@@ -15,7 +15,7 @@ export default function Stories() {
     },
     {
       id: 123456,
-      content: 'Sometimes I get hungry',
+      content: 'Sometimes I get very hungry',
     }
     ]
   };
