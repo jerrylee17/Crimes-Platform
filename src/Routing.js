@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import { Col, Row } from 'reactstrap';
 import Home from './Pages/Home/Home.js';
 import Posts from './Pages/Posts/Posts.js';
 import Statistics from './Pages/Statistics/Statistics.js';
@@ -7,7 +8,7 @@ import NavBar from './Components/Navbar/Navbar';
 
 
 export default function Routing() {
-  let routes;//these are the logged out routes
+  let routes;
 
   routes = (
     <Switch>
@@ -26,8 +27,14 @@ export default function Routing() {
 
   return (
     <Router>
-      <NavBar />
-      <main>{routes}</main>
+      <Row style={{display:'flex', margin: '0'}}>
+        <div style={{width:'20rem'}}>
+          <NavBar/>
+        </div>
+        <Col style={{paddingTop: '15px'}}>
+          <main>{routes}</main>
+        </Col>
+      </Row>
     </Router>
   );
 }

@@ -1,92 +1,32 @@
-.navbar-expand- {
-    display: inline-block;
-    background-color: #1e1e1e;
-    position: relative;
-    width: 140%;
-    height: 100%;
-    padding-right: 0px;
-    display: "flex";
-    flex-direction: "column";
+.navbar {
+  padding-left: 0px;
+  padding-right: 0px;
+  overflow: hidden;
+  background-color: #3f3f3f;
+  height: 100vh;
+  font-size: 200%;
+  width: 20rem;
+  display: block;
 }
 
-.navbar-toggler {
-    /* background-color: #aa1d26; */
-    position: absolute;
-    top: 10px;
-    left: 5px;
+.main-navigation__drawer-nav {
+  height: 100%;
 }
 
-.navbar__menu-btn {
-    width: 3rem;
-    height: 3rem;
-    background: transparent;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-right: 2rem;
-    cursor: pointer;
-  }
-  
-  .navbar__menu-btn span {
-    display: block;
-    width: 3rem;
-    height: 2.5px;
-    background: white;
-  }
-  
-  .navbar__title {
-    color: white;
-  }
-  
-  .navbar__title a {
-    text-decoration: none;
-    color: white;
-  }
-  
-  .navbar__header-nav {
-    display: none;
-  }
-  
-  .navbar__drawer-nav {
-    height: 100%;
-  }
-  
-  @media (min-width: 768px) {
-    .navbar__menu-btn {
-      display: none;
-    }
-  
-    .navbar__header-nav {
-      display: block;
-    }
-  }
+.navbut {
+  background: transparent;
+  border: none;
+  z-index: 0;
+}
 
+.sidedraw {
+  z-index: 1;
+}
 
-.slide-in-left-enter {
-    transform: translateX(-100%);
-  }
-  
-  .slide-in-left-enter-active {
-    transform: translateX(0);
-    opacity: 1;
-    transition: all 200ms;
-  }
-  
-  .slide-in-left-exit {
-    transform: translateX(0%);
-    opacity: 1;
-  }
-  
-  .slide-in-left-exit-active {
-    transform: translateX(-100%);
-    opacity: 0;
-    transition: all 200ms;
-  }
-  
-  .center {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.navbut div {
+  width: 50px;
+  height: 10px;
+  border-radius: 4px;
+  background-color: #C58488;
+  margin: 6px 0;
+}

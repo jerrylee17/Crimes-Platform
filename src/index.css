@@ -18,7 +18,8 @@ code {
 .index {
   background-color: #252525 ;
   color: #ffffff;
-  padding-left: 30px;
   padding-right: 30px;
-  height: 100vh;
+  padding-bottom: 30px;
+  height: 100%;
+  min-height: 100vh;
 }
