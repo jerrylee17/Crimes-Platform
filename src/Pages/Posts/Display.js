@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Nav,
   NavItem,
@@ -18,6 +18,10 @@ export default function Display(props) {
     if (activeTab !== tab) setActiveTab(tab);
   };
   const tabs = props.tabs;
+  
+  useEffect(() => {
+    setActiveTab('1')
+  }, [tabs])
 
   return (
     <>
@@ -48,7 +52,7 @@ export default function Display(props) {
         {tabs.map((Tab, index) => {
           return (
             <TabPane tabId={String(index + 1)}>
-              <Tab.Component />
+              <Tab.Component {...{name: Tab.title}}/>
             </TabPane>
           );
         })}
